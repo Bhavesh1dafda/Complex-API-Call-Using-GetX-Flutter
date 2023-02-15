@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:practice/route/app_route.dart';
 
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
           Center(
             child: ElevatedButton(onPressed: (){
               Get.toNamed(AppRoute.Validations);
-            }, child: Text('Enter & View Data')),
+            }, child: Text('Enter & View Data',style: TextStyle(fontSize: 20.sp),)),
           )
         ],
       ),

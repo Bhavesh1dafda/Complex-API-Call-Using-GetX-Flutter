@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:practice/controller/datacontroller.dart';
 import 'package:practice/route/app_route.dart';
@@ -103,10 +104,10 @@ class _ValidationsState extends State<Validations> {
         body: Center(
           child: Column(
             children: [
-              Container(
-                height: 150,
-                  width: 200,
-                  child: Image.network('https://www.freepnglogos.com/uploads/eagle-png-logo/lakes-eagles-png-logo-14.png')),
+              // Container(
+              //   height: 150,
+              //     width: 200,
+              //     child: Image.network('https://www.freepnglogos.com/uploads/eagle-png-logo/lakes-eagles-png-logo-14.png')),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
@@ -139,7 +140,7 @@ class _ValidationsState extends State<Validations> {
                   },
                 ),
               ),
-              SizedBox(height: 40,),
+              SizedBox(height: 100.h,),
               ElevatedButton(
                 onPressed: () {
                   // Validate returns true if the form is valid, or false otherwise.
@@ -153,11 +154,11 @@ class _ValidationsState extends State<Validations> {
 
 
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Processing Data')),
+                      SnackBar(content: Text('Processing Data',style: TextStyle(fontSize: 20.sp),)),
                     );
                   }
                 },
-                child: const Text('Submit'),
+                child:  Text('Submit',style: TextStyle(fontSize: 20.sp),),
               ),
             ],
           ),
